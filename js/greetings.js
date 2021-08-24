@@ -16,7 +16,7 @@ function onLoginSubmit(event) {
 function greetings(username) {
   greeting.innerText = `Hello ${username}, keep going!`;
   // greeting.innerText = "Hello " + username;
-  // --> another way for combining strings
+  // ㄴ> another way for combining strings
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 

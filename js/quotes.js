@@ -1,11 +1,6 @@
 const quotes = [
   {
     quote:
-      "You might be winning but you're not growing, and growing might be the most important form of winning.",
-    author: "Jordan B. Peterson",
-  },
-  {
-    quote:
       "Compare yourself to who you were yesterday, not to who someone else is today.",
     author: "Jordan B. Peterson",
   },
@@ -29,11 +24,6 @@ const quotes = [
   },
   {
     quote:
-      "Our lives begin to end the day we become silent about things that matter.",
-    author: "Martin Luther King",
-  },
-  {
-    quote:
       "Everyone thinks of changing the world, but no one thinks of changing himself.",
     author: "Lev Tolstoy",
   },
@@ -43,42 +33,8 @@ const quotes = [
   },
   {
     quote:
-      "All our dreams can come true, if we have the courage to pursue them.",
-    author: "Walt Disney",
-  },
-  {
-    quote:
-      "One must live the way on thinks or end up thinking the way one has lived.",
-    author: "Paul Bourget",
-  },
-  {
-    quote: "불가사의한 승리는 있지만 불가사의한 패배는 없다.",
-    author: "Katsuya Nomura",
-  },
-  {
-    quote:
-      "Life is a little like wrestling a gorilla. You don't quit when you're tired-you quit when the gorilla is tired.",
-    author: "Robert Strauss",
-  },
-  {
-    quote:
       "Twenty years from now you will be more disappointed by the things you didn't do than by the ones you did. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
     author: "Mark Twain",
-  },
-  {
-    quote:
-      "가볍게 움직이지 말라. 침착하게 태산같이 무거이 행동하라. 나를 알고 적을 알아야만 백 번 싸워도 위태함이 없다.",
-    author: "이순신",
-  },
-  {
-    quote:
-      "모든 일에 있어서 시간이 부족하지 않을까를 염려하지 말고 다만 내가 마음을 바쳐 최선을 다할 수 있을지 그것을 걱정하라.",
-    author: "정조",
-  },
-  {
-    quote:
-      "내 사랑하는 형제들아 너희가 알거니와 사람마다 듣기는 속히 하고 말하기는 더디 하며 성내기도 더디 하라 사람의 성내는 것이 하나님의 의를 이루지 못함이니라",
-    author: "야고보서 1:19-20",
   },
   {
     quote:
@@ -90,3 +46,11 @@ const quotes = [
     author: "로마서 12:9",
   },
 ];
+
+const quote = document.querySelector("#quote span:first-child");
+const author = document.querySelector("#quote span:last-child");
+
+const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+quote.innerText = todaysQuote.quote;
+author.innerText = todaysQuote.author;
